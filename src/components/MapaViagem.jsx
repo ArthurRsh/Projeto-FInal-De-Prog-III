@@ -1,10 +1,8 @@
 import { useEffect, useState } from "react";
 import { useNavigate, useSearchParams } from "react-router-dom";
 import { MapContainer, TileLayer, Marker, Popup, useMap } from "react-leaflet";
-import "leaflet/dist/leaflet.css";
+import "leaflet/dist/leaflet.css"; /*leaflet é a biblioteca de mapas*/
 import L from "leaflet";
-
-// Correção do bug dos ícones do Leaflet com o Vite
 import icon from "leaflet/dist/images/marker-icon.png";
 import iconShadow from "leaflet/dist/images/marker-shadow.png";
 

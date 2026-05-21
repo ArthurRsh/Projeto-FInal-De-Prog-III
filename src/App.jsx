@@ -31,6 +31,13 @@ function App() {
     setViagens(viagensAtualizadas);
   }
 
+  function editarViagem(id, novosDados) {
+    const viagensAtualizadas = viagens.map((viagem) =>
+      viagem.id === id ? { ...viagem, ...novosDados } : viagem,
+    );
+    setViagens(viagensAtualizadas);
+  }
+
   return (
     <div className="container my-5" style={{ maxWidth: "700px" }}>
       <h1 className="mb-4 text-center fw-bold text-primary">
@@ -45,7 +52,11 @@ function App() {
 
       <h2 className="h3 mb-3 text-secondary fw-bold">Minhas Viagens</h2>
       {viagens.length > 0 ? (
-        <Viagem viagens={viagens} onDeletarViagem={deletarViagem} />
+        <Viagem
+          viagens={viagens}
+          onDeletarViagem={deletarViagem}
+          onEditarViagem={editarViagem}
+        />
       ) : (
         <p className="text-muted text-center py-4">
           Nenhuma viagem planejada ainda. Vamos começar?

@@ -10,7 +10,16 @@ function Detalhes() {
   return (
     <div className="container my-5" style={{ maxWidth: "600px" }}>
       <div className="card p-5 shadow rounded-4 bg-white text-center">
-        <h1 className="fw-bold text-primary mb-3">🗺️ Detalhes do Destino</h1>
+        <h1 className="fw-bold text-primary mb-3">
+          <span
+            className="material-symbols-outlined text-info"
+            style={{ fontSize: "50px" }}
+          >
+            map
+          </span>
+          Detalhes do Destino
+        </h1>
+
         <h2 className="h3 mb-4 text-dark">{title}</h2>
         <p className="lead text-muted mb-4">{description}</p>
 
